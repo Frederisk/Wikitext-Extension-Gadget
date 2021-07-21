@@ -1,0 +1,20 @@
+{
+  "name": "wikitext-extension-gadget",
+  "version": "0.0.1",
+  "description": "A Mediawiki Gadget for Wikitext Extension",
+  "main": "dist/index",
+  "repository": "https://github.com/Frederisk/Wikitext-Extension-Gadget.git",
+  "author": "Rowe Wilson Frederisk Holme <frederisk@outlook.com>",
+  "license": "MIT",
+  "scripts": {
+    "compile": "tsc -p ./",
+    "lint": "eslint -c .eslintrc.js --ext .ts ./src"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.28.4",
+    "@typescript-eslint/parser": "^4.28.4",
+    "eslint": "^7.31.0",
+    "types-mediawiki": "^1.2.0",
+    "typescript": "^4.3.5"
+  }
+}
