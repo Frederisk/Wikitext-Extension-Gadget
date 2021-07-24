@@ -8,6 +8,7 @@
   "license": "MIT",
   "scripts": {
     "compile": "tsc -p ./",
+    "watch": "tsc -w",
     "lint": "eslint -c .eslintrc.js --ext .ts ./src"
   },
   "devDependencies": {
