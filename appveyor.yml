@@ -1,0 +1,31 @@
+################################################################################################
+#   Copyright (c) Rowe Wilson Frederisk Holme. All rights reserved.
+#   Licensed under the MIT License. See License.txt in the project root for license information.
+################################################################################################
+---
+version: 0.0.{build}
+image: Visual Studio 2019
+environment:
+  matrix:
+    - nodejs_version: "10"
+    - nodejs_version: "14"
+    - nodejs_version: "15"
+matrix:
+  allow_failures:
+    - nodejs_version: "10"
+    - nodejs_version: "15"
+install:
+  - ps: Install-Product node $env:nodejs_version
+build_script:
+  - npm install yarn -g
+  - yarn
+  - yarn run compile
+# test_script:
+#   - npm run test
+notifications:
+  - provider: Email
+    to:
+      - frederisk@outlook.com
+    on_build_success: true
+    on_build_failure: true
+    on_build_status_changed: false
