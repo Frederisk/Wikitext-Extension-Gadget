@@ -21,7 +21,7 @@ jQuery((): void => {
   if (skinName !== 'minerva') {
     button.append(link);
 
-    editButton.parent().after(button);
+    editButton.after(button);
   }
   else {
     const span = $('<span>');
