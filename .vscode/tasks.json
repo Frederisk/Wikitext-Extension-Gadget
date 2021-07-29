@@ -20,10 +20,7 @@
                 "showReuseMessage": true,
                 "clear": false
             },
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            }
+            "group": "build"
         },
         {
             "type": "npm",
@@ -39,7 +36,10 @@
                 "showReuseMessage": true,
                 "clear": false
             },
-            "group": "build"
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         },
         {
             "type": "npm",
