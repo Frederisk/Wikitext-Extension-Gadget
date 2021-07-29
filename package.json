@@ -1,11 +1,18 @@
 {
   "name": "wikitext-extension-gadget",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A Mediawiki Gadget for Wikitext Extension",
   "main": "dist/index",
-  "repository": "https://github.com/Frederisk/Wikitext-Extension-Gadget.git",
-  "author": "Rowe Wilson Frederisk Holme <frederisk@outlook.com>",
-  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/Frederisk/Wikitext-Extension-Gadget.git",
+    "type": "git"
+  },
+  "author": {
+    "name": "Rowe Wilson Frederisk Holme",
+    "email": "frederisk@outlook.com",
+    "url": "https://twitter.com/rwfholme"
+  },
+  "license": "SEE LICENSE IN LICENSE",
   "scripts": {
     "compile": "tsc -p ./",
     "watch": "tsc -w",
