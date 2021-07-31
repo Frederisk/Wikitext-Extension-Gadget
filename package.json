@@ -12,7 +12,7 @@
     "email": "frederisk@outlook.com",
     "url": "https://twitter.com/rwfholme"
   },
-  "license": "SEE LICENSE IN LICENSE",
+  "license": "SEE LICENSE IN LICENSE.txt",
   "scripts": {
     "compile": "tsc -p ./",
     "watch": "tsc -w",
