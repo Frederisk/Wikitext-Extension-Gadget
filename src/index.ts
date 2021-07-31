@@ -24,7 +24,8 @@ jQuery((): void => {
     const isRemoteBot = 'true';
     const protocol: string = window.location.protocol;
     const server: string = window.mw.config.get('wgServer');
-    const apiPath: string = '/w/api.php';
+    const scriptPath = window.mw.config.get('wgScriptPath');
+    const apiPath: string = `${scriptPath}/api.php`;
     const title: string = window.mw.config.get('wgPageName');
 
     const args: IArg[] = [
@@ -39,10 +40,16 @@ jQuery((): void => {
   }
 
   const text: string = "Open in VSCode";
+  const gadgetID: string = "wikitext-extension-gadget";
+
+  if (!window.mw) {
+    console.error(`${gadgetID}: window.mw is not accessible.`);
+    return undefined;
+  }
 
   const skinName: string = window.mw.config.get('skin');
   if (!skinName) {
-    // console.error('skin is undefined');
+    console.warn('${gadgetID}: skin is undefined');
     return undefined;
   }
 
@@ -53,7 +60,7 @@ jQuery((): void => {
   ].filter(value => value.length > 0).shift();
 
   if (anyButton === undefined) {
-    // console.log("No buttons for insertion.");
+    console.warn("{gadgetID}: No buttons for insertion.");
     return undefined;
   }
 

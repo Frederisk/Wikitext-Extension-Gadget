@@ -20,16 +20,16 @@ First make sure that your [VSCode](https://code.visualstudio.com/) has installed
     mw.loader.load("https://github.com/Frederisk/Wikitext-Extension-Gadget/releases/latest/download/index-vscode-insiders.js");
     ```
 
-### For users who have customized WikiMedia site settings
+### For users who have customized API path
 
-You may need to download the release or clone the repository, adjust some variables in the source code and copy the generated code to your account's User Preferences, Appearance in your site.
+You may need to download the release or clone the repository, adjust some variables in the source code and copy the generated code to your account's User Preferences, Appearance in your site. The gadget built in this way cannot get the newest update. It's recommended to watch this repository to keep the function up-to-date.
 
-There are two variables you should notice.
+There are two variables you should notice:
 
 - The `apiPath` should be consistent with the Entry point URLs: `api.php` in the website page Special:Version.
 
     ```ts
-    const apiPath: string = '/w/api.php';
+    const apiPath: string = `${scriptPath}/api.php`;
     ```
 
 - The `scheme` should be filled in the VSCode release version you are using. `vscode` or `vscode-insiders`.
@@ -40,3 +40,14 @@ There are two variables you should notice.
 
 ### For codespace or code-server user
 
+The gadget does not yet provide support for such editor.
+
+## Development
+
+### building
+
+```bash
+npm install -g yarn # install yarn
+yarn # install node modules
+yarn run compile # compile
+```
