@@ -64,7 +64,7 @@ jQuery((): void => {
     return undefined;
   }
 
-  const link = $('<a>').attr('href', getCodeLink()).text(text);
+  const link = $('<a>').attr('href', getCodeLink()).attr('title','Open this page in VSCode').text(text);
   const button = $('<li>').attr('id', 'vscode-wikitext-button');
 
   // console.log(skinName);

@@ -1,6 +1,13 @@
 # Wikitext-Extension-Gadget
 
-A Mediawiki Gadget for Wikitext Extension
+[![GitHub: wikitext gadget](https://img.shields.io/badge/GitHub-wikitext_gadget-yellow)](https://github.com/Frederisk/Wikitext-Extension-Gadget)
+[![Build status](https://ci.appveyor.com/api/projects/status/9p6v7x6pjxst743i?svg=true)](https://ci.appveyor.com/project/Frederisk/wikitext-extension-gadget)
+[![GitHub Actions CodeQL](https://github.com/Frederisk/Wikitext-Extension-Gadget/actions/workflows/codeql-analysis.yml/badge.svg/)](https://github.com/Frederisk/Wikitext-Extension-Gadget/actions?query=workflow%3ACodeQL)
+[![Twitter: @rwfholme](https://img.shields.io/badge/twitter-%40rwfholme-blue)](https://twitter.com/rwfholme)
+[![Patreon Donate](https://img.shields.io/badge/donate-patreon-orange)](https://www.patreon.com/rwfholme)
+
+A Mediawiki Gadget for Wikitext Extension based on MediaWiki. To allow users to directly open VSCode in the browser to edit wiki pages.
+![Open VSCode in the browser to edit wiki pages](https://user-images.githubusercontent.com/29837738/127597149-5f44306a-a9ee-461a-8022-bd39f8ce3852.gif)
 
 ## Usage
 
