@@ -49,7 +49,7 @@ jQuery((): void => {
 
   const skinName: string = window.mw.config.get('skin');
   if (!skinName) {
-    console.warn('${gadgetID}: skin is undefined');
+    console.warn(`${gadgetID}: skin is undefined`);
     return undefined;
   }
 
@@ -60,11 +60,11 @@ jQuery((): void => {
   ].filter(value => value.length > 0).shift();
 
   if (anyButton === undefined) {
-    console.warn("{gadgetID}: No buttons for insertion.");
+    console.warn(`${gadgetID}: No buttons for insertion.`);
     return undefined;
   }
 
-  const link = $('<a>').attr('href', getCodeLink()).attr('title','Open this page in VSCode').text(text);
+  const link = $('<a>').attr('href', getCodeLink()).attr('title', 'Open this page in VSCode').text(text);
   const button = $('<li>').attr('id', 'vscode-wikitext-button');
 
   // console.log(skinName);
