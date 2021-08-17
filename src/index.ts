@@ -18,14 +18,14 @@ jQuery((): void => {
     const codespaceScheme: string | undefined = 'https://*.github.dev';
     const head: string = scheme ? `${scheme}://` : `${codespaceScheme}/`;
 
-    const extensionID: string = 'rowewilsonfrederiskholme.wikitext';
-    const actionPath: string = '/PullPage';
+    const extensionID = 'rowewilsonfrederiskholme.wikitext';
+    const actionPath = '/PullPage';
 
     const isRemoteBot = 'true';
     const protocol: string = window.location.protocol;
     const server: string = window.mw.config.get('wgServer');
     const scriptPath = window.mw.config.get('wgScriptPath');
-    const apiPath: string = `${scriptPath}/api.php`;
+    const apiPath = `${scriptPath}/api.php`;
     const title: string = window.mw.config.get('wgPageName');
 
     const args: IArg[] = [
@@ -39,8 +39,8 @@ jQuery((): void => {
     return `${head}${extensionID}${actionPath}?${toUriArgs(args)}`;
   }
 
-  const text: string = "Open in VSCode";
-  const gadgetID: string = "wikitext-extension-gadget";
+  const text = "Open in VSCode";
+  const gadgetID = "wikitext-extension-gadget";
 
   if (!window.mw) {
     console.error(`${gadgetID}: window.mw is not accessible.`);
