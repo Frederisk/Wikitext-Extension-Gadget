@@ -42,6 +42,13 @@
             }
         },
         {
+            "type": "shell",
+            "command": "pwsh ${workspaceFolder}/script/produce.ps1",
+            "label": "pwsh: produce",
+            "detail": "pwsh ./script/produce.ps1",
+            "group": "build"
+        },
+        {
             "type": "npm",
             "script": "lint",
             "label": "eslint: lint",
