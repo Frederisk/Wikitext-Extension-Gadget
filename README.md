@@ -36,7 +36,7 @@ There are two variables you should notice:
 - The `apiPath` should be consistent with the Entry point URLs: `api.php` in the website page Special:Version.
 
     ```ts
-    const apiPath: string = `${scriptPath}/api.php`;
+    APIPath: window.mw.util.wikiScript('api');
     ```
 
 - The `scheme` should be filled in the VSCode release version you are using. `vscode` or `vscode-insiders`.
