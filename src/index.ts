@@ -5,7 +5,7 @@
 
 /* eslint-disable @typescript-eslint/naming-convention */
 jQuery.when(window.mw.loader.using('mediawiki.util'), $.ready).then((): void => {
-  if (!mw.config.get("wgIsProbablyEditable") || !($('#ca-viewsource').length > 0)) {
+  if (!(mw.config.get("wgIsProbablyEditable") || ($('#ca-viewsource').length > 0))) {
     return undefined;
   }
 
