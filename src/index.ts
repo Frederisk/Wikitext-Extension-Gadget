@@ -22,7 +22,8 @@ jQuery.when(window.mw.loader.using('mediawiki.util'), $.ready).then((): void => 
   const args: Record<string, string> = {
     RemoteBot: 'true',
     TransferProtocol: window.location.protocol,
-    SiteHost: window.mw.config.get('wgServer'),
+    // 'https://host' => '//host': https://www.mediawiki.org/wiki/Manual:$wgServer
+    SiteHost: window.mw.config.get('wgServer').replace(/[a-z]*?:(?=\/\/)/, ''),
     APIPath: window.mw.util.wikiScript('api'),
     Title: window.mw.config.get('wgPageName')
   };
@@ -31,7 +32,7 @@ jQuery.when(window.mw.loader.using('mediawiki.util'), $.ready).then((): void => 
 
   window.mw.util.addPortletLink(
     isMinerva ? 'p-tb' : 'p-views',
-    `${scheme}${extensionID}${actionPath}?${new URLSearchParams(args).toString()}`,
+    `${scheme}://${extensionID}${actionPath}?${new URLSearchParams(args).toString()}`,
     text,
     gadgetID,
     tooltip,
