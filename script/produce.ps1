@@ -10,7 +10,7 @@ $pathInsider = ".\dist\index-vscode-insiders.js";
 $pathCode = ".\dist\index-vscode.js";
 $pathCodium = ".\dist\index-vscodium.js";
 
-New-Item -Path $pathInsider, $PathCode, $pathCodium -ItemType File -Force;
+New-Item -Path $pathInsider, $pathCode, $pathCodium -ItemType File -Force;
 
 Set-Content -Path $pathInsider -Value $jsInsider
 Set-Content -Path $pathCode -Value $jsCode
