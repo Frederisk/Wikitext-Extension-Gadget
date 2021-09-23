@@ -27,6 +27,12 @@ First make sure that your [VSCode](https://code.visualstudio.com/) has installed
     mw.loader.load("https://github.com/Frederisk/Wikitext-Extension-Gadget/releases/latest/download/index-vscode-insiders.js");
     ```
 
+- For VSCodium user:
+
+    ```js
+    mw.loader.load("https://github.com/Frederisk/Wikitext-Extension-Gadget/releases/latest/download/index-vscodium.js");
+    ```
+
 ### For users who have customized API path
 
 You may need to download the release or clone the repository, adjust some variables in the source code and copy the generated code to your account's User Preferences, Appearance in your site. The gadget built in this way cannot get the newest update. It's recommended to watch this repository to keep the function up-to-date.
