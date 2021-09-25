@@ -23,7 +23,7 @@ jQuery.when(window.mw.loader.using('mediawiki.util'), $.ready).then((): void => 
     RemoteBot: 'true',
     TransferProtocol: window.location.protocol,
     // 'https://host' => '//host': https://www.mediawiki.org/wiki/Manual:$wgServer
-    SiteHost: window.mw.config.get('wgServer').replace(/[a-z_-]*?:(?=\/\/)/i, ''),
+    SiteHost: window.mw.config.get('wgServer').replace(/^[\w-]*?:(?=\/\/)/, ''),
     APIPath: window.mw.util.wikiScript('api'),
     Title: window.mw.config.get('wgPageName')
   };
