@@ -1,8 +1,11 @@
 # Wikitext-Extension-Gadget
 
 [![GitHub: wikitext gadget](https://img.shields.io/badge/GitHub-wikitext_gadget-yellow)](https://github.com/Frederisk/Wikitext-Extension-Gadget)
+[![Toolhub: wikitext gadget](https://img.shields.io/badge/Toolhub-wikitext_gadget-36C)](https://toolhub.wikimedia.org/tools/wikitext-extension-gadget)
+
 [![Build status](https://ci.appveyor.com/api/projects/status/9p6v7x6pjxst743i?svg=true)](https://ci.appveyor.com/project/Frederisk/wikitext-extension-gadget)
 [![GitHub Actions CodeQL](https://github.com/Frederisk/Wikitext-Extension-Gadget/actions/workflows/codeql-analysis.yml/badge.svg/)](https://github.com/Frederisk/Wikitext-Extension-Gadget/actions?query=workflow%3ACodeQL)
+
 [![Twitter: @rwfholme](https://img.shields.io/badge/twitter-%40rwfholme-blue)](https://twitter.com/rwfholme)
 [![Patreon Donate](https://img.shields.io/badge/donate-patreon-orange)](https://www.patreon.com/rwfholme)
 
