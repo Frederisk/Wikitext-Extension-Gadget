@@ -36,8 +36,8 @@ jQuery.when(window.mw.loader.using('mediawiki.util'), $.ready).then((): void => 
       tooltip: '在 Visual Studio Code 中打开此页',
     },
     traditional_chinese: {
-      text: '在 VSCode 中開啟',
-      tooltip: '在 Visual Studio Code 中開啟此頁',
+      text: '在 VSCode 中打開',
+      tooltip: '在 Visual Studio Code 中打開此頁',
     },
     korean: {
       text: 'VSCode 에서 열기',
