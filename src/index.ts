@@ -52,7 +52,7 @@ jQuery.when(window.mw.loader.using('mediawiki.util'), $.ready).then((): void => 
     'ko': i18nSource['korean'],
     'yue': i18nSource['cantonese'],
     'zh-yue': i18nSource['cantonese'],
-    'zh': i18nSource['traditional_chinese'],
+    'zh': i18nSource['simplified_chinese'],
     'zh-hans': i18nSource['simplified_chinese'],
     'zh-cn': i18nSource['simplified_chinese'],
     'zh-sg': i18nSource['simplified_chinese'],
