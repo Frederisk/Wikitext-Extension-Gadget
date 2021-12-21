@@ -14,7 +14,7 @@ A Mediawiki Gadget for Wikitext Extension based on MediaWiki. To allow users to 
 
 ## Usage
 
-### For ordinary users(such as WikiMedia Sister Project editors)
+### For ordinary users (such as WikiMedia Sister Project editors)
 
 First make sure that your [VSCode](https://code.visualstudio.com/) has installed the [Wikitext Extension for VSCode](https://marketplace.visualstudio.com/items?itemName=RoweWilsonFrederiskHolme.wikitext) v3.4.0 or upper. Then you only need to log in to your site, open the User Preferences, Appearance, and add a new line of code for Custom JavaScript:
 

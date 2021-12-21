@@ -29,23 +29,50 @@ jQuery.when(window.mw.loader.using('mediawiki.util'), $.ready).then((): void => 
     },
     cantonese: {
       text: '開啟於 VSCode',
-      tooltip: '開啟此頁於 Visual Studio Code',
+      tooltip: '喺 Visual Studio Code 開呢個頁面',
     },
     simplified_chinese: {
       text: '在 VSCode 中打开',
-      tooltip: '在 Visual Studio Code 中打开此页',
+      tooltip: '在 Visual Studio Code 中打开此页面',
     },
     traditional_chinese: {
-      text: '在 VSCode 中打開',
-      tooltip: '在 Visual Studio Code 中打開此頁',
+      text: '使用 VSCode 開啟',
+      tooltip: '以 Visual Studio Code 開啟此頁面',
     },
     korean: {
       text: 'VSCode 에서 열기',
       tooltip: '이 페이지를 Visual Studio Code 에서 열기',
     },
+    thai: {
+      text: 'เปิดใน VSCode',
+      tooltip: 'เปิดหน้านี้ใน Visual Studio Code',
+    },
+    vietnamese: {
+      text: 'Mở trong VSCode',
+      tooltip: 'Mở trang này trong Visual Studio Code',
+    },
+    indonesian: {
+      text: 'Buka di VSCode',
+      tooltip: 'Buka halaman ini di Visual Studio Code',
+    },
+    polish: {
+      text: 'Otwórz w VSCode',
+      tooltip: 'Otwórz tę stronę w Visual Studio Code',
+    },
+    dutch: {
+      text: 'Open in VSCode',
+      tooltip: 'Open deze pagina in Visual Studio Code',
+    },
+    french: {
+      text: 'Ouvrir dans VSCode',
+      tooltip: 'Ouvrir cette page dans Visual Studio Code',
+    },
+    german: {
+      text: 'Öffnen in VSCode',
+      tooltip: 'Öffne diese Seite in Visual Studio Code',
+    },
   };
   const i18n: Record<string, DisplayInfo> = {
-    // English: default
     'en': i18nSource['english'],
     'ru': i18nSource['russian'],
     'ja': i18nSource['japanese'],
@@ -61,6 +88,13 @@ jQuery.when(window.mw.loader.using('mediawiki.util'), $.ready).then((): void => 
     'zh-tw': i18nSource['traditional_chinese'],
     'zh-hk': i18nSource['traditional_chinese'],
     'zh-mo': i18nSource['traditional_chinese'],
+    'th': i18nSource['thai'],
+    'vi': i18nSource['vietnamese'],
+    'id': i18nSource['indonesian'],
+    'pl': i18nSource['polish'],
+    'nl': i18nSource['dutch'],
+    'fr': i18nSource['french'],
+    'de': i18nSource['german'],
   };
   const lang: string = window.mw.config.get('wgUserLanguage');
   const displayInfo: DisplayInfo = {
@@ -94,5 +128,6 @@ jQuery.when(window.mw.loader.using('mediawiki.util'), $.ready).then((): void => 
     'wikitext-extension-gadget',
     displayInfo['tooltip'],
     undefined,
-    isMinerva ? undefined : '#ca-history');
+    isMinerva ? undefined : '#ca-history'
+  );
 });
