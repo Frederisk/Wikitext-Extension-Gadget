@@ -1,14 +1,16 @@
-Remove-Item -Path ".\dist\*";
+using namespace System;
+
+Remove-Item -Path ".\dist\*" -Recurse -Force;
 
 yarn run compile;
 
-$jsInsider = Get-Content -Path ".\dist\index.js" -Raw;
-$jsCode = $jsInsider.Replace("vscode-insiders", "vscode");
-$jsCodium = $jsInsider.Replace("vscode-insiders", "vscodium");
+[String]$jsInsider = Get-Content -Path ".\dist\index.js" -Raw;
+[String]$jsCode = $jsInsider.Replace('vscode-insiders', 'vscode');
+[String]$jsCodium = $jsInsider.Replace('vscode-insiders', 'vscodium');
 
-$pathInsider = ".\dist\index-vscode-insiders.js";
-$pathCode = ".\dist\index-vscode.js";
-$pathCodium = ".\dist\index-vscodium.js";
+[String]$pathInsider = '.\dist\index-vscode-insiders.js';
+[String]$pathCode = '.\dist\index-vscode.js';
+[String]$pathCodium = '.\dist\index-vscodium.js';
 
 New-Item -Path $pathInsider -ItemType File -Value $jsInsider;
 New-Item -Path $pathCode -ItemType File -Value $jsCode;

@@ -120,14 +120,18 @@ jQuery.when(window.mw.loader.using('mediawiki.util'), $.ready).then((): void => 
     Title: window.mw.config.get('wgPageName')
   };
 
-  const isMinerva: boolean = window.mw.config.get('skin') === 'minerva';
+  const skinMapping: Record<string, { portletId: string; nextNode: string | undefined } | undefined> = {
+    'minerva': { portletId: 'p-tb', nextNode: '#ca-history' },
+    'monobook': { portletId: 'p-cactions', nextNode: '#ca-history' },
+  };
+  const skinName: string = window.mw.config.get('skin');
   window.mw.util.addPortletLink(
-    isMinerva ? 'p-tb' : 'p-views',
+    skinMapping[skinName]?.portletId || 'p-views',
     `${scheme}://${extensionID}${actionPath}?${new URLSearchParams(args).toString()}`,
     displayInfo['text'],
     'wikitext-extension-gadget',
     displayInfo['tooltip'],
     undefined,
-    isMinerva ? undefined : '#ca-history'
+    skinMapping[skinName]?.nextNode
   );
 });
