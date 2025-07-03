@@ -104,7 +104,7 @@ jQuery.when(window.mw.loader.using('mediawiki.util'), $.ready).then((): void => 
   };
 
   // get scheme, `vscode.env.uriScheme`
-  const scheme = 'vscode-insiders'; // 'vscode-insiders', 'vscode', undefined
+  const scheme = '#vscode-insiders#'; // 'vscode-insiders', 'vscode', undefined
   // for codespace or code-server, you need invoke `await vscode.env.asExternalUri`
   // const codespaceScheme = 'https://*.github.dev';
   // const head: string = scheme ? `${scheme}://` : `${codespaceScheme}/`;
@@ -112,7 +112,10 @@ jQuery.when(window.mw.loader.using('mediawiki.util'), $.ready).then((): void => 
   const extensionID = 'rowewilsonfrederiskholme.wikitext';
   const actionPath = '/PullPage';
   const args: Record<string, string> = {
-    RemoteBot: 'true',
+    // Except for extreme value (such as `'false'`, `''`, `undefined`), all other values will be treated as `true`.
+    // If `true` vscode will use the web page config to create a temporary remote bot.
+    // For private wikis, you can set `RemoteBot` to `false` to use the vscode local bot.
+    RemoteBot: '#enableRemoteBot#',
     TransferProtocol: window.location.protocol,
     // 'https://host' => '//host': https://www.mediawiki.org/wiki/Manual:$wgServer
     SiteHost: window.mw.config.get('wgServer').replace(/^[\w-]*?:(?=\/\/)/, ''),
