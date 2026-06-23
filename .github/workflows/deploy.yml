@@ -1,0 +1,50 @@
+name: Deploy and Release Gadget
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+          cache: yarn
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Build the project
+        run: yarn run compile
+
+      - name: Run PowerShell adaptation script
+        shell: pwsh
+        run: ./scripts/adapt.ps1
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v3
+        with:
+          files: |
+            dist/index-*.js
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Deploy to MediaWiki Gadget
+        env:
+          MW_USERNAME: Rowe Wilson Frederisk Holme@GitHubDeployer
+          MW_PASSWORD: ${{ secrets.MW_BOT_PASSWORD }}
+          GITHUB_REF_NAME: ${{ github.ref_name }}
+          GITHUB_SHA: ${{ github.sha }}
+        shell: pwsh
+        run: ./scripts/deploy.ps1

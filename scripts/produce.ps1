@@ -2,6 +2,7 @@ using namespace System;
 using namespace System.IO;
 using namespace System.Collections.Generic;
 
+$ErrorActionPreference = "Stop";
 [String]$DistPath = [Path]::GetFullPath([Path]::Combine($PSScriptRoot, '..', 'dist'));
 Remove-Item -Path ([Path]::Combine($DistPath, '*')) -Recurse -Force -Exclude 'index.js';
 
