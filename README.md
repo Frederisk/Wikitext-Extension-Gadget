@@ -14,7 +14,17 @@ A Mediawiki Gadget for Wikitext Extension based on MediaWiki. To allow users to 
 
 ## Usage
 
-### For ordinary users (such as WikiMedia Sister Project editors)
+### For ordinary users
+
+> [!CAUTION]
+> Due to [the Content-Security-Policy implemented by Wikimedia](https://github.com/Frederisk/Wikitext-Extension-Gadget/issues/14), sites within the Wikimedia family of projects may refuse to execute user scripts from external sources, including this one.
+If you encounter this issue, please try replacing the script mentioned below with this line:
+>
+> ```js
+> mw.loader.load("https://meta.wikimedia.org/w/index.php?title=User:Rowe_Wilson_Frederisk_Holme/Wikitext-Extension-Gadget/index-vscode-insiders.js&action=raw&ctype=text/javascript");
+> ```
+>
+> Please refer to the information below to replace the `index-vscode-insiders.js` part with the specific version you require.
 
 First make sure that your [VSCode](https://code.visualstudio.com/) has installed the [Wikitext Extension for VSCode](https://marketplace.visualstudio.com/items?itemName=RoweWilsonFrederiskHolme.wikitext) v3.4.0 or upper. Then you only need to log in to your site, open the User Preferences, Appearance, and add a new line of code for Custom JavaScript:
 
