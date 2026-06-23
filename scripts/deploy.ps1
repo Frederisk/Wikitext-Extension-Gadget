@@ -1,6 +1,7 @@
 using namespace System;
 using namespace System.Collections;
 using namespace System.Collections.Generic;
+using namespace System.IO;
 
 $ErrorActionPreference = 'Stop';
 [String]$userName = $env:MW_USERNAME;
